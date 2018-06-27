@@ -102,7 +102,7 @@ function MLClientImpl() {
     let params_list = create_args_list(job.parameters);
     let opts_list = [];
     let mode = job.opts.mode||'run';
-    let cmd = `${__dirname}/../../mlproc/mlproc run-process --mode=${mode} ${job.processor_name} -i ${inputs_list.join(' ')} -o ${outputs_list.join(' ')} -p ${params_list.join(' ')} ${opts_list.join(' ')}`;
+    let cmd = `ml-${mode}-process ${job.processor_name} -i ${inputs_list.join(' ')} -o ${outputs_list.join(' ')} -p ${params_list.join(' ')} ${opts_list.join(' ')}`;
     console.info('Running: ' + cmd);
     run_cmd(cmd).then(function() {
         if (job.status=='running') { //not stoped
