@@ -1,6 +1,6 @@
 {
   "name": "mlclient",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "JavaScript client for running MountainLab processes locally and remotely",
   "main": "index.js",
   "scripts": {
