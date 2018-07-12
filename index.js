@@ -7,7 +7,7 @@ exports.stop_all_processes=require(__dirname + '/impl/mlclientimpl.js').stop_all
 process.on('SIGTERM', cleanup_and_exit);
 process.on('SIGINT', cleanup_and_exit);
 function cleanup_and_exit() {
-  console.log('cleanup');
+  console.info('Stopping all processes.');
   exports.stop_all_processes(function() {
     process.exit(-1);
   });
